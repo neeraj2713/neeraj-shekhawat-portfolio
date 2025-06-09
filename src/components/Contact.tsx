@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, Github, Linkedin, Twitter } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -14,15 +15,39 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically handle form submission
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        'service_0c7cbd2',
+        'template_1iqwwhc',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        'R5fRpWLVRHL4VzmWO'
+      );
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -36,32 +61,32 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "neeraj.shekhawat@example.com",
-      href: "mailto:neeraj.shekhawat@example.com"
+      value: "neeraj.shekhawat2003@gmail.com",
+      href: "mailto:neeraj.shekhawat2003@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 9876543210",
-      href: "tel:+919876543210"
+      value: "+91 9829642579",
+      href: "tel:+919829642579"
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/neerajshekhawat",
-      href: "https://github.com/neerajshekhawat"
+      value: "github.com/neeraj2713",
+      href: "https://github.com/neeraj2713"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/neerajshekhawat",
-      href: "https://linkedin.com/in/neerajshekhawat"
+      value: "linkedin.com/in/neeraj-shekhawat-151a171a6",
+      href: "https://www.linkedin.com/in/neeraj-shekhawat-151a171a6/"
     },
     {
       icon: Twitter,
       label: "Twitter",
-      value: "@neerajshekhawat_dev",
-      href: "https://twitter.com/neerajshekhawat_dev"
+      value: "@neerxj13",
+      href: "https://x.com/neerxj13"
     }
   ];
 
@@ -128,6 +153,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Your name"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -143,6 +169,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="your.email@example.com"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -158,14 +185,16 @@ const Contact = () => {
                     placeholder="Tell me about your project..."
                     rows={6}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
                 <Button 
                   type="submit" 
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
