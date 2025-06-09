@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu, X } from "lucide-react";
@@ -39,7 +38,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="text-2xl font-bold text-primary">
-              &lt;/&gt; Neeraj Singh
+              &lt;/&gt; Neeraj Shekhawat
             </div>
             
             {/* Desktop Navigation */}

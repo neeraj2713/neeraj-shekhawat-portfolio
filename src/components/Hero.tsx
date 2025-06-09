@@ -33,11 +33,23 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8 animate-fade-in">
+          {/* Profile Picture */}
+          <div className="flex justify-center mb-8">
+            <div className="relative">
+              <img
+                src="https://i.ibb.co/vGshMSh/profile.jpg"
+                alt="Neeraj Shekhawat"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/20 shadow-2xl"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 to-purple-600/20"></div>
+            </div>
+          </div>
+
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold">
               Hello, I'm{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
-                Neeraj Singh
+                Neeraj Shekhawat
               </span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-muted-foreground">

@@ -36,8 +36,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "neeraj.singh@example.com",
-      href: "mailto:neeraj.singh@example.com"
+      value: "neeraj.shekhawat@example.com",
+      href: "mailto:neeraj.shekhawat@example.com"
     },
     {
       icon: Phone,
@@ -48,20 +48,20 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/neerajsingh",
-      href: "https://github.com/neerajsingh"
+      value: "github.com/neerajshekhawat",
+      href: "https://github.com/neerajshekhawat"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/neerajsingh",
-      href: "https://linkedin.com/in/neerajsingh"
+      value: "linkedin.com/in/neerajshekhawat",
+      href: "https://linkedin.com/in/neerajshekhawat"
     },
     {
       icon: Twitter,
       label: "Twitter",
-      value: "@neerajsingh_dev",
-      href: "https://twitter.com/neerajsingh_dev"
+      value: "@neerajshekhawat_dev",
+      href: "https://twitter.com/neerajshekhawat_dev"
     }
   ];
 
