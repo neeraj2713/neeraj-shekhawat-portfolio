@@ -58,9 +58,7 @@ const Hero = () => {
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Results-oriented Full Stack Developer specializing in building robust backend systems, 
-            optimizing CI/CD pipelines, and leveraging cloud platforms for deployment and management. 
-            Based in Rajasthan, India.
+            Full Stack Developer with strong backend expertise and working knowledge of DevOps and AWS. Skilled in building scalable APIs, managing databases, and optimizing server-side performance. Familiar with CI/CD, Docker, and cloud deployment practices.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
