@@ -28,6 +28,30 @@ const Portfolio = () => {
       github: "#",
       demo: "#",
       impact: "Complete healthcare appointment solution"
+    },
+    {
+      title: "Music Academy",
+      description: "Built a responsive web application with search functionality, improving course discovery by 30%. Leveraged modern frameworks to deliver a scalable, visually appealing UI with modular code.",
+      technologies: ["Next.js", "Acertinity UI", "Tailwind CSS"],
+      github: "#",
+      demo: "#",
+      impact: "30% improvement in course discovery"
+    },
+    {
+      title: "Medium-2.0",
+      description: "Developed a blogging website with user authentication, profile management, and blog creation. Engineered a scalable system supporting 1000+ blog posts with optimized performance using Cloudflare.",
+      technologies: ["React", "TypeScript", "Cloudflare", "Hono"],
+      github: "#",
+      demo: "#",
+      impact: "Supports 1000+ blog posts with CDN optimization"
+    },
+    {
+      title: "True Feedback",
+      description: "Anonymous messaging platform with scalable UI using Next.js, achieving 90% Lighthouse performance score. Features secure OTP-based authentication with 99% success rate.",
+      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "MongoDB", "Mongoose", "NextAuth", "Zod"],
+      github: "#",
+      demo: "#",
+      impact: "90% Lighthouse score with 99% auth success rate"
     }
   ];
 

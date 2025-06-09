@@ -8,7 +8,7 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 
 const Index = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true); // Set dark mode as default
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
