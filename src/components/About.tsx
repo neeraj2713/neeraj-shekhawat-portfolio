@@ -1,9 +1,6 @@
-
 import { Card, CardContent } from "@/components/ui/card";
-
 const About = () => {
-  return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+  return <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
@@ -14,11 +11,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-lg leading-relaxed">
-              I'm a results-oriented Full Stack Developer with a passion for backend systems, 
-              CI/CD pipelines, and cloud solutions. My expertise lies in building robust, 
-              scalable applications that deliver real value to users and businesses.
-            </p>
+            <p className="text-lg leading-relaxed">Full Stack Developer with strong expertise in backend development, skilled in building scalable APIs and databases. Experienced in DevOps and cloud technologies to streamline deployment and infrastructure management.</p>
             <p className="text-lg leading-relaxed">
               Based in Rajasthan, India, I combine technical excellence with a deep understanding 
               of modern development practices to create solutions that are not just functional, 
@@ -57,22 +50,12 @@ const About = () => {
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-center mb-8">Technical Skills</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[
-              "React", "Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL",
-              "MySQL", "MongoDB", "Docker", "AWS", "Git", "CI/CD"
-            ].map((skill) => (
-              <div
-                key={skill}
-                className="bg-muted rounded-lg p-3 text-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
-              >
+            {["React", "Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL", "MySQL", "MongoDB", "Docker", "AWS", "Git", "CI/CD"].map(skill => <div key={skill} className="bg-muted rounded-lg p-3 text-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
                 {skill}
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
